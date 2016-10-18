@@ -40,3 +40,7 @@ function snagshout_fetch_deals() {
     'type' => 'syndicated',
   ]);
 }
+
+function snagshout_fetch_categories() {
+  return snagshout_http_get('api/v1/categories');
+}

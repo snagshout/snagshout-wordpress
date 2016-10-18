@@ -26,10 +26,20 @@ class SnagshoutWidget extends WP_Widget
   }
 
   function form($instance) {
+    $categories = ['all' => 'All categories'];
+    $categoriesResponse = json_decode(snagshout_fetch_categories());
+
+    if ($categoriesResponse && $categoriesResponse->data) {
+      foreach ($categoriesResponse->data as $category) {
+        $categories[$category->id] = $category->name;
+      }
+    }
+
     echo snagshout_render_view('widget-options', array_merge(
       $instance,
       [
         'widget' => $this,
+        'categories' => $categories,
       ]
     ));
   }
