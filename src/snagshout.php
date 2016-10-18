@@ -13,7 +13,9 @@ onto your Wordpress blog.
 Author: Seller Labs
 Version: 0.1
 Author URI: https://www.sellerlabs.com
-*/
+ */
+
+require_once 'widget/snagshout-widget-class.php';
 
 function snagshout_menu() {
   add_options_page(
@@ -77,6 +79,10 @@ function snagshout_setting_callback(array $options) {
   echo snagshout_render_view('admin-text-field', $options);
 }
 
+function snagshout_register_widgets() {
+  register_widget(SnagshoutWidget::class);
+}
+
 function snagshout_render_view($templateName, array $templateData) {
   ob_start();
 
@@ -89,3 +95,4 @@ function snagshout_render_view($templateName, array $templateData) {
 
 add_action('admin_menu', 'snagshout_menu');
 add_action('admin_init', 'snagshout_register_settings');
+add_action('widgets_init', 'snagshout_register_widgets');
