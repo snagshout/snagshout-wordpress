@@ -10,7 +10,8 @@
   [class*='ss-col-'] {
     float: left;
     min-height: 1px;
-    padding-right: 20px; /* column-space */
+    padding-left: 10px;
+    padding-right: 10px; /* column-space */
   }
 
   [class*='ss-col-'] [class*='ss-col-']:last-child {
@@ -18,21 +19,16 @@
   }
 
   .ss-grid {
-    width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    margin-left: -10px;
+    margin-right: -10px;
   }
 
   .ss-grid:after {
     content: "";
     display: table;
     clear: both;
-  }
-
-  .ss-grid-pad {
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 0;
   }
 
   .ss-masonry {
@@ -43,10 +39,6 @@
     flex-direction: column;
     flex-flow: wrap;
     height: 100%;
-  }
-
-  .ss-push-right {
-    float: right;
   }
 
   .ss-col-12 {
@@ -65,6 +57,10 @@
     width: 33.33%;
   }
 
+  .ss-col-3 {
+    width: 25%;
+  }
+
   .ss-expand {
     width: 100%;
   }
@@ -72,9 +68,29 @@
   .ss-campaign {
     margin-bottom: 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 
-  .ss-campaign img {
+  .ss-campaign .ss-campaign-card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+
+  .ss-campaign .ss-campaign-card .ss-campaign-image {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .ss-campaign .ss-campaign-card .ss-campaign-image img {
     margin-bottom: 10px;
+    align-self: center;
+  }
+
+  .ss-prime {
+    color: rgba(236, 137, 10, 1);
   }
 </style>

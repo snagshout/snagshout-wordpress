@@ -8,12 +8,34 @@ class SnagshoutWidget extends WP_Widget
   }
 
   function widget($args, $instance) {
-    $response = snagshout_fetch_deals();
+    $query = [];
+
+    if (isset($instance['category']) && $instance['category'] !== 'all') {
+      $query['category'] = $instance['category'];
+    }
+
+    if (isset($instance['feed']) && $instance['feed'] === 'newest') {
+      $query['sort'] = '+campaigns.ends_at';
+    }
+
+    if (isset($instance['limit'])) {
+      $query['limit'] = $instance['limit'];
+    }
+
+    $response = json_decode(snagshout_fetch_deals($query));
+
+    if ($response
+      && $response->data
+      && is_array($response->data)
+      && $instance['randomize']
+    ) {
+      shuffle($response->data);
+    }
 
     echo snagshout_render_view('widget', array_merge(
       [
-        'title' => 'Snagshout Deals',
-        'response' => json_decode($response),
+        'title' => 'Featured Coupon Codes',
+        'response' => $response,
       ],
       $args,
       $instance
@@ -40,6 +62,15 @@ class SnagshoutWidget extends WP_Widget
       [
         'widget' => $this,
         'categories' => $categories,
+        'layouts' => [
+          '2-columns' => 'Two columns',
+          '3-columns' => 'Three columns',
+          '4-columns' => 'Four columns',
+        ],
+        'feeds' => [
+          'popular' => 'Popular deals first',
+          'newest' => 'Newest deals first',
+        ]
       ]
     ));
   }

@@ -25,8 +25,8 @@ function snagshout_http_get($uri, array $options = []) {
   return $result;
 }
 
-function snagshout_fetch_deals() {
-  return snagshout_http_get('api/v1/campaigns', [
+function snagshout_fetch_deals($query = []) {
+  return snagshout_http_get('api/v1/campaigns', array_merge([
     'embeds' => implode(',', [
       'product',
       'product.amazonData',
@@ -38,7 +38,7 @@ function snagshout_fetch_deals() {
       'promotions.promoCode'
     ]),
     'type' => 'syndicated',
-  ]);
+  ], $query));
 }
 
 function snagshout_fetch_categories() {

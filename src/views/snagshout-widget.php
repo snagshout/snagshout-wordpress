@@ -1,8 +1,11 @@
 <?php
   echo $before_widget;
-  echo $before_title;
-  echo apply_filters('widget_title', $title);
-  echo $after_title;
+
+  if (!$hide_title) {
+    echo $before_title;
+    echo apply_filters('widget_title', $title);
+    echo $after_title;
+  }
 
   if ($response === null || $response->status != 200) {
     if ($response && $response->status == 400) {
@@ -22,7 +25,10 @@
     echo '<div class="ss-grid ss-masonry">';
 
     foreach ($response->data as $campaign) {
-      echo snagshout_render_view('widget-campaign', ['campaign' => $campaign]);
+      echo snagshout_render_view('widget-campaign', [
+        'campaign' => $campaign,
+        'layout' => $layout,
+      ]);
     }
 
     echo '</div>';
