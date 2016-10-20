@@ -64,6 +64,7 @@ class SnagshoutWidget extends WP_Widget
         'categories' => $categories,
         'layouts' => [
           '2-columns' => 'Two columns',
+          '1-column' => 'One column',
           '3-columns' => 'Three columns',
           '4-columns' => 'Four columns',
         ],

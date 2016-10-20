@@ -30,7 +30,12 @@ function snagshout_styles() {
   echo snagshout_render_view('styles');
 }
 
+function snagshout_widget_javascript() {
+  echo snagshout_render_view('widget-js');
+}
+
 add_action('admin_menu', 'snagshout_menu');
 add_action('admin_init', 'snagshout_register_settings');
 add_action('widgets_init', 'snagshout_register_widgets');
 add_action('wp_head', 'snagshout_styles');
+add_action('wp_footer', 'snagshout_widget_javascript');

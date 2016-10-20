@@ -1,4 +1,5 @@
 <?php
+  $promoCode = $campaign->promotions[0]->promoCode->promoCode;
   $price = $campaign->product->price;
   $offerPrice = $campaign->promotions[0]->price;
 
@@ -9,6 +10,9 @@
   $columnClass = 'ss-col-6';
 
   switch ($layout) {
+    case '1-column':
+      $columnClass = 'ss-col-12';
+      break;
     case '3-columns':
       $columnClass = 'ss-col-4';
       break;
@@ -38,7 +42,8 @@
       $campaign->product->amazonData->fulfillment === 'FBA'
         ? ' <span class="ss-prime">&#x26A1; Prime</span>'
         : '',
-    ]) ?>
-    <button type="button" class="ss-expand">Get code</button>
+      ]) ?>
+    <div class="ss-coupon-button" data-promo-code="<?php echo $promoCode ?>">
+    </div>
   </div>
 </div>

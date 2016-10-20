@@ -10,8 +10,8 @@
   [class*='ss-col-'] {
     float: left;
     min-height: 1px;
-    padding-left: 10px;
-    padding-right: 10px; /* column-space */
+    padding-left: 5px;
+    padding-right: 5px; /* column-space */
   }
 
   [class*='ss-col-'] [class*='ss-col-']:last-child {
@@ -21,8 +21,8 @@
   .ss-grid {
     margin: 0 auto;
     overflow: hidden;
-    margin-left: -10px;
-    margin-right: -10px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
 
   .ss-grid:after {
