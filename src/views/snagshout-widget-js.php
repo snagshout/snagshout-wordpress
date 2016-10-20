@@ -6,22 +6,16 @@
       getInitialState: function() {
         return {
           active: false,
-          copied: false,
         };
       },
 
       render: function () {
-        if (this.state.copied) {
+        if (this.state.active) {
           return React.createElement(
-            'button',
-            { type: 'button', className: 'ss-expand', disabled: true },
-            String.fromCharCode(9986),
-            ' Copied!'
-          );
-        } else if (this.state.active) {
-          return React.createElement(
-            'button',
-            { type: 'button', className: 'ss-expand', disabled: true },
+            'div',
+            { className: 'ss-promocode ss-fade-in' },
+            React.createElement('b', {}, 'CODE:'),
+            React.createElement('br', {}),
             this.props.promoCode
           );
         }
@@ -38,11 +32,7 @@
       },
 
       handleButtonClick: function () {
-        this.setState({ copied: true });
-
-        setTimeout(function () {
-          this.setState({ copied: false, active: true });
-        }.bind(this), 2000);
+        this.setState({ active: true });
       },
 
       propTypes: {

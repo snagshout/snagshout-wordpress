@@ -1,4 +1,6 @@
 <style type="text/css">
+  @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
   [class*='ss-grid'],
   [class*='ss-col-'],
   .ss-grid:after {
@@ -92,5 +94,18 @@
 
   .ss-prime {
     color: rgba(236, 137, 10, 1);
+  }
+
+  .ss-promocode {
+    font-family: monospace;
+    background-color: #eee;
+    padding: 5px;
+    border: 1px dashed #aaa;
+  }
+
+  .ss-fade-in {
+    animation: fadeIn ease-in 1;
+    animation-fill-mode: forwards;
+    animation-duration: 0.25s;
   }
 </style>
