@@ -101,6 +101,7 @@
     background-color: #eee;
     padding: 5px;
     border: 1px dashed #aaa;
+    color: #333;
   }
 
   .ss-fade-in {

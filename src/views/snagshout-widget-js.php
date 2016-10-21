@@ -27,7 +27,7 @@
             className: 'ss-expand',
             onClick: this.handleButtonClick,
           },
-          'Get My Code'
+          'Get Promo Code'
         );
       },
 

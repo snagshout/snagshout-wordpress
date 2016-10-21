@@ -7,6 +7,11 @@
 
   $externalUrl = $campaign->product->externalUrl;
 
+  if (get_option('snagshout_affiliate_id')) {
+    $externalUrl .= parse_url($externalUrl, PHP_URL_QUERY) ? '&' : '?';
+    $externalUrl .= vsprintf('tag=%s', [get_option('snagshout_affiliate_id')]);
+  }
+
   $columnClass = 'ss-col-6';
 
   switch ($layout) {
