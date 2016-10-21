@@ -36,6 +36,7 @@ class SnagshoutWidget extends WP_Widget
       [
         'title' => 'Featured Coupon Codes',
         'response' => $response,
+        'hide_title' => false,
       ],
       $args,
       $instance

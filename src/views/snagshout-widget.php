@@ -3,7 +3,10 @@
 
   if (!$hide_title) {
     echo $before_title;
-    echo apply_filters('widget_title', $title);
+    echo apply_filters(
+      'widget_title',
+      $title ? $title : 'Featured Coupon Codes'
+    );
     echo $after_title;
   }
 
