@@ -10,6 +10,7 @@
   }
 
   [class*='ss-col-'] {
+    width: 100%;
     float: left;
     min-height: 1px;
     padding-left: 5px;
@@ -43,24 +44,22 @@
     height: 100%;
   }
 
-  .ss-col-12 {
-    width: 100%;
-  }
+  @media only screen and (min-width: 480px) {
+    .ss-col-8 {
+      width: 66.66%;
+    }
 
-  .ss-col-8 {
-    width: 66.66%;
-  }
+    .ss-col-6 {
+      width: 50%;
+    }
 
-  .ss-col-6 {
-    width: 50%;
-  }
+    .ss-col-4 {
+      width: 33.33%;
+    }
 
-  .ss-col-4 {
-    width: 33.33%;
-  }
-
-  .ss-col-3 {
-    width: 25%;
+    .ss-col-3 {
+      width: 25%;
+    }
   }
 
   .ss-expand {
