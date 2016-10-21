@@ -14,8 +14,6 @@
           return React.createElement(
             'div',
             { className: 'ss-promocode ss-fade-in' },
-            React.createElement('b', {}, 'CODE:'),
-            React.createElement('br', {}),
             this.props.promoCode
           );
         }
@@ -27,7 +25,7 @@
             className: 'ss-expand',
             onClick: this.handleButtonClick,
           },
-          'Get Promo Code'
+          'Get Coupon Code'
         );
       },
 
