@@ -1,18 +1,30 @@
 <?php
 
 /**
- * @package Snagshout
- * @version 0.1
- */
-
-/*
-Plugin Name: Snagshout
-Plugin URI: https://www.snagshout.com
-Description: The Snagshout plugin allows you to easily embed syndicated deals
-onto your Wordpress blog.
-Author: Seller Labs
-Version: 0.1
-Author URI: https://www.sellerlabs.com
+ * Copyright 2016 Seller Labs LLC
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ *
+ *  @package Snagshout
+ *  @version 0.1.0
+ *
+ *  Plugin Name: Snagshout
+ *  Plugin URI: https://www.snagshout.com
+ *  Description: The Snagshout plugin allows you to easily embed syndicated
+ *  deals into your Wordpress blog.
+ *  Author: Seller Labs LLC
+ *  Version: 0.1.0
+ *  Author URI: https://www.sellerlabs.com
  */
 
 require_once 'admin/settings.php';
@@ -22,18 +34,28 @@ require_once 'core/utils.php';
 require_once 'core/view-engine.php';
 require_once 'widget/snagshout-widget-class.php';
 
+/**
+ * Registers the main widget.
+ */
 function snagshout_register_widgets() {
   register_widget(SnagshoutWidget::class);
 }
 
+/**
+ * Renders stylesheets for the visual appearance of the widget.
+ */
 function snagshout_styles() {
   echo snagshout_render_view('styles');
 }
 
+/**
+ * Renders script tags for interactive functionality of the plugin.
+ */
 function snagshout_widget_javascript() {
   echo snagshout_render_view('widget-js');
 }
 
+// Here we register all the action hooks used by the plugin.
 add_action('admin_menu', 'snagshout_menu');
 add_action('admin_init', 'snagshout_register_settings');
 add_action('widgets_init', 'snagshout_register_widgets');
