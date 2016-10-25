@@ -9,5 +9,13 @@ dist:
 	cp CHANGELOG.md dist
 	zip -r snagshout-wordpress.zip dist
 
+upload:
+	svn co https://plugins.svn.wordpress.org/snagshout remote
+	cp -R dist/ remote/trunk
+	cd remote \
+		&& svn add trunk/* \
+		&& svn ci -m 'Release. See github.com/sellerlabs/snagshout-wordpress.' \
+		--username snagshout
+
 clean:
 	rm -rf dist
