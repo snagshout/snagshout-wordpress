@@ -81,7 +81,7 @@ svn co https://plugins.svn.wordpress.org/snagshout remote
 cd remote
 
 # Make changes (use svn add and svn remove as needed)
-# View status using: svn status
+# View status using: svn stat
 # View diff using: svn diff
 
 svn ci -m "Release version vX.X.X"
