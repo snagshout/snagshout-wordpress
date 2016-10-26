@@ -84,11 +84,31 @@ cd remote
 # View status using: svn stat
 # View diff using: svn diff
 
-svn ci -m "Release version vX.X.X"
+svn ci -m "Release. See github.com/sellerlabs/snagshout-wordpress."
 ```
 
 When done, use `make clean` to restore the repository to its original state.
 This deletes the ZIP file, `dist`, and `remote` directories for you.
+
+### Tagging
+
+When a new release is ready, maintainers can use `bash scripts/tag.sh`, which
+will prompt for the version number (`X.X.X`) and the continue to perform all
+the steps needed to publish and tag a new version of the plugin on both Git and
+SVN.
+
+### Changelog
+
+The change log for this repository is automatically derived from commit
+messages, which follow the Angular commit convention. To update the change log,
+maintainers can use `make changelog`. It uses a Docker container which reads the
+commit history and overwrites the change log file, and the commits it.
+
+```sh
+make changelog
+
+git push
+```
 
 ## License
 
