@@ -19,3 +19,38 @@
 function snagshout_ellipsis($input, $max) {
   return mb_strimwidth($input, 0, $max, "...");
 }
+
+function snagshout_parse_query($qs) {
+  $result = [];
+
+  parse_str($qs, $result);
+
+  return $result;
+}
+
+function snagshout_mutate_query($url, $mutations) {
+  $components = parse_url($url);
+
+  $query = http_build_query(array_merge(
+    isset($components['query'])
+      ? snagshout_parse_query($components['query'])
+      : [],
+    $mutations
+  ));
+
+  $fragmented = [
+    isset($components['scheme']) ? $components['scheme'] . '://' : null,
+    isset($components['username'])
+      ? $components['username']
+        . (isset($components['password']) ? ':' . $components['password'] : '')
+        . '@'
+      : null,
+    $components['host'],
+    isset($components['port']) ? ':' . $components['port'] : null,
+    $components['path'],
+    $query ? '?' . $query : null,
+    isset($components['anchor']) ? '#' . $components['anchor'] : null,
+  ];
+
+  return implode('', array_filter($fragmented));
+}

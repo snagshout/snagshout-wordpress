@@ -22,12 +22,11 @@ $offerPrice = $campaign->promotions[0]->price;
 
 $percentOff = round((1.0 - ($offerPrice/$price)) * 100.0);
 
-$externalUrl = $campaign->product->externalUrl;
-
-if (get_option('snagshout_affiliate_id')) {
-  $externalUrl .= parse_url($externalUrl, PHP_URL_QUERY) ? '&' : '?';
-  $externalUrl .= vsprintf('tag=%s', [get_option('snagshout_affiliate_id')]);
-}
+$externalUrl = snagshout_mutate_query($campaign->product->externalUrl, [
+  'tag' => get_option('snagshout_affiliate_id')
+    ? get_option('snagshout_affiliate_id')
+    : null
+]);
 
 $columnClass = 'ss-col-6';
 
