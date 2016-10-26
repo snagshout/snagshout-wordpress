@@ -127,4 +127,16 @@
     animation-fill-mode: forwards;
     animation-duration: 0.25s;
   }
+
+  .ss-secondary {
+    background-color: #777;
+  }
+
+  .ss-mar-5-top {
+    margin-top: 5px;
+  }
+
+  .ss-amazon-button {
+    font-weight: normal;
+  }
 </style>

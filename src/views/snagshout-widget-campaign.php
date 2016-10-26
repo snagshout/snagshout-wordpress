@@ -66,5 +66,10 @@ switch ($layout) {
       ]) ?>
     <div class="ss-coupon-button" data-promo-code="<?php echo $promoCode ?>">
     </div>
+    <a href="<?php echo $externalUrl ?>">
+      <button class="ss-amazon-button ss-expand ss-secondary ss-mar-5-top">
+        <small>View on Amazon</small>
+      </button>
+    </a>
   </div>
 </div>
