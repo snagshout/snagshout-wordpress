@@ -16,14 +16,14 @@
  *  limitations under the License.
  *
  *  @package Snagshout
- *  @version 0.1.0
+ *  @version 0.2.1
  *
  *  Plugin Name: Snagshout
  *  Plugin URI: https://www.snagshout.com
  *  Description: The Snagshout plugin allows you to easily embed syndicated
  *  deals into your Wordpress blog.
  *  Author: Seller Labs LLC
- *  Version: 0.1.0
+ *  Version: 0.2.1
  *  Author URI: https://www.sellerlabs.com
  */
 
