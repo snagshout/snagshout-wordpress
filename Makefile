@@ -19,3 +19,5 @@ upload:
 
 clean:
 	rm -rf dist
+	rm -rf remote
+	rm -rf snagshout-wordpress.zip
