@@ -66,4 +66,33 @@ Once the plugin is enabled, any changes to the code on the local filesystem
 will be reflected in the container, so you can use any editor on your local
 system to modify the plugin.
 
+### Publishing
+
+To generate a ZIP file for releasing the plugin, simply use `make dist`. This
+command will prepare a `dist` directory with the contents of the plugin and
+compress it into a ZIP file.
+
+Additionally, WordPress uses SVN for hosting plugins in their directory. In
+order to update the plugin there, you'll need to clone the repository, and make
+changes to the copy on trunk and tag a release if needed:
+
+```sh
+svn co https://plugins.svn.wordpress.org/snagshout remote
+cd remote
+
+# Make changes (use svn add and svn remove as needed)
+# View status using: svn status
+# View diff using: svn diff
+
+svn ci -m "Release version vX.X.X"
+```
+
+When done, use `make clean` to restore the repository to its original state.
+This deletes the ZIP file, `dist`, and `remote` directories for you.
+
+## License
+
+This plugin is licensed under the Apache 2.0 license. Please refer to the
+`LICENSE` file for more information.
+
 [1]: https://github.com/sellerlabs/snagshout-wordpress/releases
