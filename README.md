@@ -11,6 +11,8 @@ syndication network, directly as a widget on your blog.
 
 - A Snagshout partner account.
 
+- The date/time of the server hosting the blog should be correctly setup.
+
 ## Installation
 
 To use the install the plugin, you can either use the WordPress plugin
@@ -76,6 +78,12 @@ configurations. Each widget's appearance and content can be customized through
 the provided options (Title, Layout, Category, Feed, etc).
 
 ![Screenshot](https://github.com/sellerlabs/snagshout-wordpress/blob/master/assets/screenshot-02.png?raw=true)
+
+After saving your changes, the Snagshout widget will be loaded into your site
+and begin displaying deals. If you provided an affiliate ID on the
+configuration panel, product links will include it automatically.
+
+![Screenshot](https://github.com/sellerlabs/snagshout-wordpress/blob/master/assets/screenshot-03.png?raw=true)
 
 ## Development
 
