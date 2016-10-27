@@ -45,6 +45,38 @@ directory or manually upload it into your WordPress install.
 6. After WordPress has finished, unpacking the plugin, activate it by clicking
    **Activate**.
 
+## Configuration
+
+After the plugin is activated, you will need to provide your partner account
+credentials. As a partner, you should have received a key pair consisting of a
+public ID and a secret key. These are used by the plugin to authenticate with
+the Snagshout platform and fetch deals.
+
+**Settings >> Snagshout:**
+
+In the settings panel, you can provide your public ID and secret key, and also
+set an optional affiliate ID to be included in all product links.
+
+![Screenshot](https://github.com/sellerlabs/snagshout-wordpress/blob/master/assets/screenshot-01.png?raw=true)
+
+## Usage: Adding widgets
+
+Once the plugin is configured, you can proceed to begin adding Snagshout deals
+widgets into your site's sidebars and content areas.
+
+> **NOTE:** Widget areas are defined by the themed used by your site. Most
+themes include at least one sidebar, while some also include an area for
+widgets below posts and pages.
+
+**Appearance >> Widgets:**
+
+On the widgets admin panel, you can select "Snagshout Deals" and add it into a
+widget area. You can add as many widgets as you would like, with different
+configurations. Each widget's appearance and content can be customized through
+the provided options (Title, Layout, Category, Feed, etc).
+
+![Screenshot](https://github.com/sellerlabs/snagshout-wordpress/blob/master/assets/screenshot-02.png?raw=true)
+
 ## Development
 
 Development of this plugin is done entirely using Docker containers. The plugin
