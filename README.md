@@ -3,6 +3,15 @@
 The Snagshout WordPress plugin allows you to embed deals from the Snagshout
 syndication network, directly as a widget on your blog.
 
+  - [Requirements](#requirements)
+  - [Installation](#installation)
+    - [Easy: Plugin directory](#easy-plugin-directory)
+    - [Advanced: Manual upload](#advanced-manual-upload)
+  - [Configuration](#configuration)
+  - [Usage: Adding widgets](#usage-adding-widgets)
+  - [Development](#development)
+  - [License](#license)
+
 ## Requirements
 
 - A recent version of WordPress (4.1 or higher).
