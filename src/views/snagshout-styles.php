@@ -92,6 +92,10 @@
     flex-direction: column;
   }
 
+  .ss-campaign a {
+    box-shadow: none;
+  }
+
   .ss-campaign .ss-campaign-card {
     display: flex;
     flex-direction: column;

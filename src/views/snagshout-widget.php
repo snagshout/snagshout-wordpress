@@ -16,15 +16,17 @@
  *  limitations under the License.
  */
 
-echo $before_widget;
+if (!isset($catalog)) {
+  echo $before_widget;
 
-if (!$hide_title) {
-  echo $before_title;
-  echo apply_filters(
-    'widget_title',
-    $title ? $title : 'Featured Coupon Codes'
-  );
-  echo $after_title;
+  if (!$hide_title) {
+    echo $before_title;
+    echo apply_filters(
+      'widget_title',
+      $title ? $title : 'Featured Coupon Codes'
+    );
+    echo $after_title;
+  }
 }
 
 if ($response === null || $response->status != 200) {
@@ -54,4 +56,6 @@ if ($response === null || $response->status != 200) {
   echo '</div>';
 }
 
-echo $after_widget;
+if (!isset($catalog)) {
+  echo $after_widget;
+}

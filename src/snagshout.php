@@ -28,6 +28,7 @@
  */
 
 require_once 'admin/settings.php';
+require_once 'catalog/init.php';
 require_once 'core/hashing.php';
 require_once 'core/http.php';
 require_once 'core/utils.php';
@@ -55,9 +56,20 @@ function snagshout_widget_javascript() {
   echo snagshout_render_view('widget-js');
 }
 
+function snagshout_get_single_template($single_template) {
+  if (get_post_type() === 'ss_catalog') {
+    $single_template = dirname( __FILE__ ) . '/templates/catalog.php';
+  }
+
+  return $single_template;
+}
+
 // Here we register all the action hooks used by the plugin.
 add_action('admin_menu', 'snagshout_menu');
 add_action('admin_init', 'snagshout_register_settings');
 add_action('widgets_init', 'snagshout_register_widgets');
 add_action('wp_head', 'snagshout_styles');
 add_action('wp_footer', 'snagshout_widget_javascript');
+add_action('init', 'snagshout_register_catalogs');
+add_action('save_post', 'snagshout_store_catalog', 10, 3);
+add_action('the_content', 'snagshout_render_catalog');

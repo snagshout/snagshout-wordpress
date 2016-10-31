@@ -88,7 +88,8 @@ class SnagshoutWidget extends WP_Widget
         'feeds' => [
           'popular' => 'Popular deals first',
           'newest' => 'Newest deals first',
-        ]
+        ],
+        'catalog' => false,
       ]
     ));
   }

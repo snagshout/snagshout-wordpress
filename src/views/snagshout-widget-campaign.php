@@ -54,7 +54,7 @@ switch ($layout) {
       ?>
     </div>
     <a href="<?php echo $externalUrl ?>">
-      <h6><?php echo snagshout_ellipsis($campaign->product->name, 64) ?></h6>
+      <?php echo snagshout_ellipsis($campaign->product->name, 64) ?>
     </a>
     <?php echo vsprintf('<p><b>$%01.2f</b> (%d%% off)%s</p>', [
       $price,
