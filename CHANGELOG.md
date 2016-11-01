@@ -1,4 +1,30 @@
 
+# v0.2.4 to v0.3.0
+
+
+## New features:
+
+  - [`8961142`] **catalogs:** Add custom post type [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`fe34b26`] **widget:** Improve widget styles and refactor some internals [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+## Updated documentation:
+
+  - [`d954fcd`] **README:** Add table of contents [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`9bb2476`] **README:** Improve post-installation instructions [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`fec55e9`] **README:** Add post-installation instructions [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`c9ade67`] **README:** Add notes on tagging and the changelog [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+## Chores:
+
+  - [`9d5c552`] **CHANGELOG:** Update CHANGELOG [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`2f9b864`] **assets:** Add screenshots [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`fb62a24`] **contrib:** Improve auto-deploy script [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`6e905f4`] **readme.txt:** Bump version to 0.3.0 [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+## Merge commits:
+
+  - [`1854ff1`] Merge branch 'etcinit/catalogs' [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
 # v0.2.3 to v0.2.4
 
 
