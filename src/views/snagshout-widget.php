@@ -16,22 +16,30 @@
  *  limitations under the License.
  */
 
-echo $before_widget;
+if (!isset($catalog)) {
+  echo $before_widget;
 
-if (!$hide_title) {
-  echo $before_title;
-  echo apply_filters(
-    'widget_title',
-    $title ? $title : 'Featured Coupon Codes'
-  );
-  echo $after_title;
+  if (!$hide_title) {
+    echo $before_title;
+    echo apply_filters(
+      'widget_title',
+      $title ? $title : 'Featured Coupon Codes'
+    );
+    echo $after_title;
+  }
 }
 
 if ($response === null || $response->status != 200) {
   if ($response && $response->status == 400) {
     echo implode(' ', [
       'Unable to authenticate with the deals API.',
-      'Please ensure your credentials are correctly setup. (Status 400)'
+      'Please ensure that your credentials are correctly setup. (Status 400)'
+    ]);
+  } else if ($response && $response->status == 422){
+    echo implode(' ', [
+      'Unable to authenticate with the deals API.',
+      'Please ensure that your credentials and system time are correctly',
+      'setup. (Status 422)',
     ]);
   } else if ($response) {
     echo vsprintf(
@@ -54,4 +62,6 @@ if ($response === null || $response->status != 200) {
   echo '</div>';
 }
 
-echo $after_widget;
+if (!isset($catalog)) {
+  echo $after_widget;
+}

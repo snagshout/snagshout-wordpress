@@ -54,3 +54,11 @@ function snagshout_mutate_query($url, $mutations) {
 
   return implode('', array_filter($fragmented));
 }
+
+function snagshout_get(array $values, $key, $default) {
+  if (isset($values[$key])) {
+    return $values[$key];
+  }
+
+  return $default;
+}

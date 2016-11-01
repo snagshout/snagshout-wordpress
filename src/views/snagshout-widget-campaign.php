@@ -53,22 +53,29 @@ switch ($layout) {
         }
       ?>
     </div>
-    <a href="<?php echo $externalUrl ?>">
-      <h6><?php echo snagshout_ellipsis($campaign->product->name, 64) ?></h6>
-    </a>
-    <?php echo vsprintf('<p><b>$%01.2f</b> (%d%% off)%s</p>', [
-      $price,
-      $percentOff,
-      $campaign->product->amazonData->fulfillment === 'FBA'
-        ? ' <span class="ss-prime">&#x26A1; Prime</span>'
-        : '',
-      ]) ?>
-    <div class="ss-coupon-button" data-promo-code="<?php echo $promoCode ?>">
+    <div class="ss-campaign-title">
+      <a href="<?php echo $externalUrl ?>">
+        <?php echo snagshout_ellipsis($campaign->product->name, 64) ?>
+      </a>
     </div>
-    <a href="<?php echo $externalUrl ?>">
-      <button class="ss-amazon-button ss-expand ss-secondary ss-mar-5-top">
-        <small>View on Amazon</small>
-      </button>
-    </a>
+    <div class="ss-campaign-meta">
+      <?php echo vsprintf(
+        '<p><ul><li><b>$%01.2f</b></li><li>(%d%% off)</li>%s</ul></p>',
+        [
+          $price,
+          $percentOff,
+          $campaign->product->amazonData->fulfillment === 'FBA'
+            ? ' <li class="ss-prime">&#x26A1; Prime</li>'
+            : '',
+          ])
+      ?>
+      <div class="ss-coupon-button" data-promo-code="<?php echo $promoCode ?>">
+      </div>
+      <a href="<?php echo $externalUrl ?>">
+        <button class="ss-amazon-button ss-expand ss-secondary ss-mar-5-top">
+          <small>View on Amazon</small>
+        </button>
+      </a>
+    </div>
   </div>
 </div>
