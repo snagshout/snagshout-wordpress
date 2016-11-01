@@ -29,6 +29,7 @@
 
 require_once 'admin/settings.php';
 require_once 'catalog/init.php';
+require_once 'core/constants.php';
 require_once 'core/hashing.php';
 require_once 'core/http.php';
 require_once 'core/utils.php';
@@ -54,14 +55,6 @@ function snagshout_styles() {
  */
 function snagshout_widget_javascript() {
   echo snagshout_render_view('widget-js');
-}
-
-function snagshout_get_single_template($single_template) {
-  if (get_post_type() === 'ss_catalog') {
-    $single_template = dirname( __FILE__ ) . '/templates/catalog.php';
-  }
-
-  return $single_template;
 }
 
 // Here we register all the action hooks used by the plugin.

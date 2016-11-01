@@ -60,3 +60,16 @@ function snagshout_fetch_deals($query = []) {
 function snagshout_fetch_categories() {
   return snagshout_http_get('api/v1/categories');
 }
+
+function snagshout_get_category_map() {
+  $categories = ['all' => 'All categories'];
+  $categoriesResponse = json_decode(snagshout_fetch_categories());
+
+  if ($categoriesResponse && $categoriesResponse->data) {
+    foreach ($categoriesResponse->data as $category) {
+      $categories[$category->id] = $category->name;
+    }
+  }
+
+  return $categories;
+}

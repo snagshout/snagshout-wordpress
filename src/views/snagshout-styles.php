@@ -94,6 +94,7 @@
 
   .ss-campaign a {
     box-shadow: none;
+    border: 0;
   }
 
   .ss-campaign .ss-campaign-card {
@@ -102,6 +103,7 @@
     flex-grow: 1;
     border: 1px solid #ddd;
     padding: 5px;
+    font-size: 0.8em;
   }
 
   .ss-campaign .ss-campaign-card .ss-campaign-image {
@@ -112,6 +114,31 @@
   .ss-campaign .ss-campaign-card .ss-campaign-image img {
     margin-bottom: 10px;
     align-self: center;
+  }
+
+  .ss-campaign .ss-campaign-card .ss-campaign-title {
+    flex-grow: 1;
+    display: flex;
+  }
+
+  .ss-campaign .ss-campaign-card .ss-campaign-title a {
+    align-self: center;
+  }
+
+  .ss-campaign .ss-campaign-card ul {
+    list-style-type: none;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ss-campaign .ss-campaign-card ul li {
+    margin-right: 5px;
+  }
+
+  .ss-campaign .ss-campaign-card ul li:last-of-type {
+    margin-right: 0;
   }
 
   .ss-prime {

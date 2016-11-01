@@ -33,7 +33,13 @@ if ($response === null || $response->status != 200) {
   if ($response && $response->status == 400) {
     echo implode(' ', [
       'Unable to authenticate with the deals API.',
-      'Please ensure your credentials are correctly setup. (Status 400)'
+      'Please ensure that your credentials are correctly setup. (Status 400)'
+    ]);
+  } else if ($response && $response->status == 422){
+    echo implode(' ', [
+      'Unable to authenticate with the deals API.',
+      'Please ensure that your credentials and system time are correctly',
+      'setup. (Status 422)',
     ]);
   } else if ($response) {
     echo vsprintf(

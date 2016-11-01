@@ -1,5 +1,21 @@
 <?php
 
+/**
+ * Copyright 2016 Seller Labs LLC
+ *
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License.
+ */
+
 function snagshout_register_catalogs() {
   register_post_type(
     'ss_catalog',
@@ -41,30 +57,11 @@ function snagshout_register_catalog_metabox() {
 }
 
 function snagshout_render_catalog_metabox($post) {
-  $categories = ['all' => 'All categories'];
-  $categoriesResponse = json_decode(snagshout_fetch_categories());
-
-  if ($categoriesResponse && $categoriesResponse->data) {
-    foreach ($categoriesResponse->data as $category) {
-      $categories[$category->id] = $category->name;
-    }
-  }
-
-  $instance = [];
-
   echo snagshout_render_view('catalog-options', [
     // General data.
-    'categories' => $categories,
-    'layouts' => [
-      '2-columns' => 'Two columns',
-      '1-column' => 'One column',
-      '3-columns' => 'Three columns',
-      '4-columns' => 'Four columns',
-    ],
-    'feeds' => [
-      'popular' => 'Popular deals first',
-      'newest' => 'Newest deals first',
-    ],
+    'categories' => snagshout_get_category_map(),
+    'layouts' => snagshout_get_layout_map(),
+    'feeds' => snagshout_get_feed_map(),
 
     // Loaded options.
     'layout' => get_post_meta($post->ID, 'ss_layout', true),
@@ -80,31 +77,17 @@ function snagshout_store_catalog($post_id, $post, $update) {
     return;
   }
 
-  update_post_meta(
-    $post_id,
-    'ss_layout',
-    snagshout_get($_POST, 'ss_layout', '3-columns')
-  );
-  update_post_meta(
-    $post_id,
-    'ss_category',
-    snagshout_get($_POST, 'ss_category', '')
-  );
-  update_post_meta(
-    $post_id,
-    'ss_feed',
-    snagshout_get($_POST, 'ss_feed', 'popular')
-  );
-  update_post_meta(
-    $post_id,
-    'ss_limit',
-    snagshout_get($_POST, 'ss_limit', '25')
-  );
-  update_post_meta(
-    $post_id,
-    'ss_randomize',
-    snagshout_get($_POST, 'ss_randomize', 'false')
-  );
+  $update_map = [
+    'ss_layout' => '3-columns',
+    'ss_category' => '',
+    'ss_feed' => 'popular',
+    'ss_limit' => '25',
+    'ss_randomize' => 'false',
+  ];
+
+  foreach ($update_map as $key => $default) {
+    update_post_meta($post_id, $key, snagshout_get($_POST, $key, $default));
+  }
 }
 
 function snagshout_render_catalog($content) {
