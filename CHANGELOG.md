@@ -1,4 +1,16 @@
 
+# v0.3.0 to v0.3.1
+
+
+## Fixes:
+
+  - [`99d15a9`] **core:** Use gmdate to ensure we are using UTC time [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+## Chores:
+
+  - [`7e476e5`] **CHANGELOG:** Update CHANGELOG [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`06ac882`] **readme.txt:** Bump version to 0.3.1 [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
 # v0.2.4 to v0.3.0
 
 
