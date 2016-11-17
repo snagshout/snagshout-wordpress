@@ -99,7 +99,7 @@
     class="tiny-text"
     type="number"
     min="1"
-    max="50"
+    max="200"
     value="<?php echo $limit ? $limit : '25' ?>"
     id="<?php echo esc_attr('ss_limit') ?>"
     name="<?php echo esc_attr('ss_limit') ?>"/>
