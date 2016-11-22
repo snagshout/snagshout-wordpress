@@ -3,7 +3,7 @@ Contributors: snagshout
 Tags: e-commerce, ecommerce, products, widget
 Requires at least: 4.1.0
 Tested up to: 4.6.1
-Stable tags: 0.4.0
+Stable tag: 0.4.0
 License: Apache 2.0
 License URI: https://www.apache.org/licenses/LICENSE-2.0.txt
 

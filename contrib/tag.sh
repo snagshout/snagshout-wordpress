@@ -5,7 +5,7 @@ read new_tag
 
 echo "${new_tag}"
 
-sed -i '' -e "s/Stable tag: [0-9]*\\.[0-9]*\\.[0-9]*/Stable tags: ${new_tag}/" \
+sed -i '' -e "s/Stable tag: [0-9]*\\.[0-9]*\\.[0-9]*/Stable tag: ${new_tag}/" \
   src/readme.txt
 sed -i '' -e "s/@version [0-9]*\\.[0-9]*\\.[0-9]*/@version ${new_tag}/" \
   -e "s/Version: [0-9]*\\.[0-9]*\\.[0-9]*/Version: ${new_tag}/" \
