@@ -6,7 +6,7 @@ changelog:
 dist:
 	rm -rf dist
 	mkdir dist
-	cp -R src/ dist
+	cp -R src/* dist
 	cp LICENSE dist
 	cp CHANGELOG.md dist
 	zip -r snagshout-wordpress.zip dist
