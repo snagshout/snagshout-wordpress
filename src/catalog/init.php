@@ -40,9 +40,18 @@ function snagshout_register_catalogs() {
       'menu_icon' => 'dashicons-cart',
       'register_meta_box_cb' => 'snagshout_register_catalog_metabox',
       'supports' => ['title'],
+      'rewrite' => [
+        'slug' => 'catalog',
+      ],
       // ...
     ]
   );
+}
+
+function snagshout_flush_rewrites() {
+  snagshout_register_catalogs();
+
+  flush_rewrite_rules();
 }
 
 function snagshout_register_catalog_metabox() {
@@ -51,7 +60,7 @@ function snagshout_register_catalog_metabox() {
     __('Catalog Options', 'textdomain'),
     'snagshout_render_catalog_metabox',
     'ss_catalog',
-    'side',
+    'normal',
     'high'
   );
 }
@@ -97,3 +106,5 @@ function snagshout_render_catalog($content) {
 
   return snagshout_render_view('catalog');
 }
+
+register_activation_hook( __FILE__, 'snagshout_flush_rewrites');
