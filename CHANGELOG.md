@@ -1,4 +1,21 @@
 
+# v0.3.1 to v0.4.0
+
+
+## New features:
+
+  - [`5180cf2`] **catalogs:** Add rewrites on permalinks [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`24eb8f1`] **options:** Allow limit to go up to 200 [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+## Chores:
+
+  - [`c472413`] **CHANGELOG:** Update CHANGELOG [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`eaff51b`] **readme.txt:** Bump version to 0.4.0 [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+## Merge commits:
+
+  - [`680d961`] Merge branch 'etcinit/limit-increase' [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
 # v0.3.0 to v0.3.1
 
 
