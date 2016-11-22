@@ -13,7 +13,7 @@ dist:
 
 upload: dist
 	svn co https://plugins.svn.wordpress.org/snagshout remote
-	cp -R dist/ remote/trunk
+	cp -R dist/* remote/trunk
 	cd remote \
 		&& svn add --force trunk/* \
 		&& svn ci -m 'Release. See github.com/sellerlabs/snagshout-wordpress.' \
