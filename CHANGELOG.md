@@ -1,4 +1,37 @@
 
+# v0.4.2 to v0.4.3
+
+
+## Chores:
+
+  - [`a36469b`] **readme.txt:** Bump version to 0.4.3 [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+# v0.4.1 to v0.4.2
+
+
+## Fixes:
+
+  - [`d10f661`] **Makefile:** Fix dist folder building on Linux [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+## Chores:
+
+  - [`810d86d`] **readme.txt:** Bump version to 0.4.2 [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+# v0.4.0 to v0.4.1
+
+
+## Fixes:
+
+  - [`b8d4c58`] **readme:** Fix version replacement on upload script [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`d3bb21b`] **readme:** Set correct stable version [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
+## Chores:
+
+  - [`4c7fa1a`] **CHANGELOG:** Update CHANGELOG [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`f417918`] **readme.txt:** Bump version to 0.4.1 [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`eaff51b`] **readme.txt:** Bump version to 0.4.0 [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+  - [`38c507f`] **readme.txt:** Bump version to 0.4.0 [(Eduardo Trujillo)](mailto://ed@sellerlabs.com)
+
 # v0.3.1 to v0.4.0
 
 
