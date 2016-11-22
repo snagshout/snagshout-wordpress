@@ -126,7 +126,7 @@
     class="tiny-text"
     type="number"
     min="1"
-    max="50"
+    max="200"
     value="<?php echo $limit ? $limit : '25' ?>"
     id="<?php echo esc_attr($widget->get_field_id('limit')) ?>"
     name="<?php echo esc_attr($widget->get_field_name('limit')) ?>"/>
