@@ -25,7 +25,7 @@ the plugin's administration panel.
 To use the install the plugin, you can either use the WordPress plugin
 directory or manually upload it into your WordPress install.
 
-=== Easy: Plugin directory ===
+**Easy: Plugin directory**
 
 1. Login into your blog's administration panel.
 
@@ -38,7 +38,7 @@ directory or manually upload it into your WordPress install.
 5. After WordPress has finished downloading the plugin, click **Activate** to
    enable the plugin.
 
-=== Advanced: Manual upload ===
+**Advanced: Manual upload**
 
 1. Go to the [releases page][1] and download the latest version of
    `snagshout-wordpress.zip`.
@@ -54,9 +54,7 @@ directory or manually upload it into your WordPress install.
 6. After WordPress has finished, unpacking the plugin, activate it by clicking
    **Activate**.
 
-== Getting Started ==
-
-=== Configuration ===
+== Configuration ==
 
 After the plugin is activated, you will need to provide your partner account
 credentials. As a partner, you should have received a key pair consisting of a
@@ -70,7 +68,7 @@ set an optional affiliate ID to be included in all product links.
 
 ![Screenshot](https://github.com/sellerlabs/snagshout-wordpress/blob/master/assets/screenshot-01.png?raw=true)
 
-=== Usage: Adding widgets ===
+== Usage: Adding widgets ==
 
 Once the plugin is configured, you can proceed to begin adding Snagshout deals
 widgets into your site's sidebars and content areas.
