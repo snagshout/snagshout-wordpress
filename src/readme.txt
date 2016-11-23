@@ -3,7 +3,7 @@ Contributors: snagshout
 Tags: e-commerce, ecommerce, products, widget
 Requires at least: 4.1.0
 Tested up to: 4.6.1
-Stable tag: 0.4.5
+Stable tag: 0.4.6
 License: Apache 2.0
 License URI: https://www.apache.org/licenses/LICENSE-2.0.txt
 
@@ -53,6 +53,8 @@ directory or manually upload it into your WordPress install.
 
 6. After WordPress has finished, unpacking the plugin, activate it by clicking
    **Activate**.
+
+[1]: https://github.com/sellerlabs/snagshout-wordpress/releases
 
 == Configuration ==
 
