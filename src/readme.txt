@@ -7,18 +7,37 @@ Stable tag: 0.4.6
 License: Apache 2.0
 License URI: https://www.apache.org/licenses/LICENSE-2.0.txt
 
-The Snagshout WordPress plugin allows you to embed deals from the Snagshout
-syndication network, directly as a widget on your blog.
+The Snagshout WordPress Plugin allows you to embed deals from the Seller Labs
+Deal Network directly through a widget onto your website.
 
 == Description ==
 
-The Snagshout WordPress plugin allows you to embed deals from the Snagshout
-syndication network, directly as a widget on your blog.
+The Snagshout WordPress Plugin allows you to embed deals from the Seller Labs
+Deal Network directly through a widget onto your website.
 
-In order to use this plugin, you will need to register as a Snagshout partner.
-You can do this by contacting Snagshout's customer support. Once you have an
-account, you will be provided with a public/private key pair that can be set in
-the plugin's administration panel.
+Promote thousands of product deals with the click of a button. The Seller Labs
+Deal Network / Snagshout removes the hassle from looking for deals to promote to
+your audience. Easily create new pages to host deals on, or integrate deals into
+pages you have already developed. The best part? You get to keep 100% of the
+affiliate commissions! Developed by Seller Labs for its Deal Network Partners
+and Snagshout Partners, this plugin lets you promote deals easily from a
+simple-to-use plugin.
+
+You must have already registered with Seller Labs as a Deal Network Partner in
+order to be eligible. More information at http://sellerlabs.com/deal-network.
+
+Features:
+
+- Thousands of product deals at your fingertips.
+
+- Customizable: Easily choose the number of deals, categories, and how they are
+  displayed.
+
+- Automatic Updates: We’ll automatically update deals that are displayed.
+
+- 100% affiliate commissions: Not only do you get to keep 100% of the Amazon
+  affiliate commissions earned, we’ll automatically add your Amazon affiliate
+  link to every deal.
 
 == Installation ==
 
@@ -58,38 +77,39 @@ directory or manually upload it into your WordPress install.
 
 == Configuration ==
 
-After the plugin is activated, you will need to provide your partner account
-credentials. As a partner, you should have received a key pair consisting of a
-public ID and a secret key. These are used by the plugin to authenticate with
-the Snagshout platform and fetch deals.
+After the plugin has been activated, you will need to provide your partner
+account credentials. As a partner, you should have received a key pair
+consisting of a public ID and a secret key. These are used by the plugin to
+authenticate with the Snagshout platform and fetch deals.
 
 **Settings >> Snagshout:**
 
-In the settings panel, you can provide your public ID and secret key, and also
-set an optional affiliate ID to be included in all product links.
-
-![Screenshot](https://github.com/sellerlabs/snagshout-wordpress/blob/master/assets/screenshot-01.png?raw=true)
+In the settings panel, you can provide your public ID and secret key, as well
+as set an optional affiliate ID to be included in all product links.
 
 == Usage: Adding widgets ==
 
-Once the plugin is configured, you can proceed to begin adding Snagshout deals
+Once the plugin has been configured, you can start adding Snagshout deals
 widgets into your site's sidebars and content areas.
 
-> **NOTE:** Widget areas are defined by the themed used by your site. Most
-themes include at least one sidebar, while some also include an area for
-widgets below posts and pages.
+> **NOTE:** Widget areas are defined by the themed used on your site. Most
+themes include at least one sidebar, while some include an area for widgets
+below posts and pages.
 
 **Appearance >> Widgets:**
 
-On the widgets admin panel, you can select "Snagshout Deals" and add it into a
-widget area. You can add as many widgets as you would like, with different
-configurations. Each widget's appearance and content can be customized through
-the provided options (Title, Layout, Category, Feed, etc).
+- On the widgets admin panel, you can select "Snagshout Deals" and add it into
+  a widget area. You can add as many widgets as you would like, with different
+  configurations. Each widget's appearance and content can be customized through
+  the provided options (Title, Layout, Category, Feed, etc).
 
-![Screenshot](https://github.com/sellerlabs/snagshout-wordpress/blob/master/assets/screenshot-02.png?raw=true)
+- After saving your changes, the Snagshout widget will be loaded into your site
+  and begin displaying deals. If you provided an affiliate ID on the
+  configuration panel, product links will include it automatically.
 
-After saving your changes, the Snagshout widget will be loaded into your site
-and begin displaying deals. If you provided an affiliate ID on the
-configuration panel, product links will include it automatically.
+- Usage: Adding Deals To Content or Inline
 
-![Screenshot](https://github.com/sellerlabs/snagshout-wordpress/blob/master/assets/screenshot-03.png?raw=true)
+If your template does not support Widgets in the Page content or inline,
+you can use [Turbo Widgets][2].
+
+[2]: https://wordpress.org/plugins/turbo-widgets/
